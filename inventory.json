@@ -1,0 +1,102 @@
+[
+    {
+        "product_name": "Paracetamol",
+        "quantity": 300,
+        "price": 20,
+        "sales_last_3_months": [
+            30,
+            25,
+            40
+        ]
+    },
+    {
+        "product_name": "Cough Syrup",
+        "quantity": 50,
+        "price": 80,
+        "sales_last_3_months": [
+            15,
+            20,
+            18
+        ]
+    },
+    {
+        "product_name": "Antibiotic Cream",
+        "quantity": 40,
+        "price": 150,
+        "sales_last_3_months": [
+            10,
+            12,
+            15
+        ]
+    },
+    {
+        "product_name": "Bandages",
+        "quantity": 202,
+        "price": 5,
+        "sales_last_3_months": [
+            50,
+            60,
+            55
+        ]
+    },
+    {
+        "product_name": "Pain Reliever Gel",
+        "quantity": 30,
+        "price": 120,
+        "sales_last_3_months": [
+            8,
+            10,
+            12
+        ]
+    },
+    {
+        "product_name": "Gloves (Box of 100)",
+        "quantity": 25,
+        "price": 300,
+        "sales_last_3_months": [
+            5,
+            6,
+            7
+        ]
+    },
+    {
+        "product_name": "Surgical Mask (Pack of 50)",
+        "quantity": 100,
+        "price": 250,
+        "sales_last_3_months": [
+            30,
+            35,
+            40
+        ]
+    },
+    {
+        "product_name": "Hand Sanitizer (500ml)",
+        "quantity": 60,
+        "price": 100,
+        "sales_last_3_months": [
+            20,
+            25,
+            22
+        ]
+    },
+    {
+        "product_name": "Thermometer",
+        "quantity": 15,
+        "price": 500,
+        "sales_last_3_months": [
+            5,
+            4,
+            6
+        ]
+    },
+    {
+        "product_name": "Oximeter",
+        "quantity": 10,
+        "price": 1000,
+        "sales_last_3_months": [
+            2,
+            3,
+            2
+        ]
+    }
+]
