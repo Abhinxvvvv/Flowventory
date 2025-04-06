@@ -1,6 +1,5 @@
 import json
 
-# Function to load inventory from JSON file
 import os
 
 INVENTORY_FILE = "inventory.json"
@@ -22,14 +21,11 @@ def load_inventory():
         print("⚠️ inventory.json not found! Creating a new one.")
         return []
 
-
-# Function to save inventory back to JSON
 def save_inventory(inventory):
     """Saves updated inventory back to JSON file."""
     with open("inventory.json", "w") as file:
         json.dump(inventory, file, indent=4)
 
-# Function to display inventory
 def display_inventory(inventory):
     """Displays all medical products with quantity and price."""
     print("\n📦 Medical Inventory:")
@@ -37,7 +33,6 @@ def display_inventory(inventory):
         print(f"🩺 {item['product_name']}: {item['quantity']} units | ₹{item['price']} each")
     print()
 
-# Function to restock an item
 def restock_inventory(inventory):
     """Allows user to restock a medical product."""
     display_inventory(inventory)
@@ -53,7 +48,6 @@ def restock_inventory(inventory):
 
     print("❌ Product not found in inventory.")
 
-# Function to adjust price
 def adjust_price(inventory):
     """Allows user to adjust the price of a product."""
     display_inventory(inventory)
@@ -69,7 +63,6 @@ def adjust_price(inventory):
 
     print("❌ Product not found in inventory.")
 
-# Function to forecast next month's stock demand
 def forecast_sales(inventory):
     """Predicts stock needed for next month and shows price suggestions."""
     print("\n📊 Medical Inventory Forecast (Next Month)")
@@ -82,7 +75,7 @@ def forecast_sales(inventory):
             continue
 
         avg_sales = sum(sales_history) // len(sales_history)
-        predicted_demand = int(avg_sales * 1.1)  # Assume 10% growth
+        predicted_demand = int(avg_sales * 1.1)  
 
         print(f"\n🩺 {item['product_name']}:")
         print(f"   💰 Current Price: ₹{item['price']}")
@@ -90,12 +83,11 @@ def forecast_sales(inventory):
         print(f"   🔮 Predicted Demand: {predicted_demand}")
         print(f"   📦 Current Stock: {item['quantity']}")
 
-        # Restocking Suggestion
         if item["quantity"] < predicted_demand:
             needed = predicted_demand - item["quantity"]
             print(f"   ⚠️ Restock Needed: Order {needed} more units!")
 
-        # Price Suggestion
+        
         if predicted_demand > avg_sales:
             suggested_price = int(item["price"] * 1.05)  # Increase by 5%
             print(f"   💰 Suggested Price: ₹{suggested_price} (Demand is high!)")
@@ -104,7 +96,7 @@ def forecast_sales(inventory):
 
     print()
 
-# Main function to run inventory system
+
 def main():
     inventory = load_inventory()
 
@@ -132,6 +124,5 @@ def main():
         else:
             print("❌ Invalid choice! Please enter a number between 1-5.")
 
-# Run the program
 if __name__ == "__main__":
     main()
